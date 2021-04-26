@@ -6,4 +6,4 @@ FROM tomcat:latest
 #RUN cp /repo/boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/
 ENV VAR_WEBAPPS_DIR=/usr/local/tomcat/webapps
 COPY ./boxfuse/target/hello-1.0.war $VAR_WEBAPPS_DIR/hello-1.0.war
-CMD ["start"]
+CMD ["catalina.sh", "run"]
